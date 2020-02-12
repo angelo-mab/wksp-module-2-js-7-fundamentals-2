@@ -9,7 +9,8 @@ const people = [
     {name: {first: "Louis", last: "Reasoner"}, age: 21},
     {name: {first: "Shahan", middle: "Haig", last: "Krakirian"}, age: 21}
 ];
-
+people.push(
+    { name: { first: 'Gabriel', middle: 'Angelo', last: 'Mabilog' }, age: 24 });
 // Exercise 5.0
 // ------------
 // Add the object representing yourself to this array of people (if your
@@ -25,9 +26,16 @@ const people = [
 
 function avgAge(peopleArr) {
     // Yuor code here
+    let sum = 0;
+    let numPeople = peopleArr.length;
+
+    peopleArr.forEach(person =>{
+        sum += person.age;
+    });
+    return sum / numPeople;
 }
 
-console.log(`Average age is ${avgAge(people)}.`);
+console.log(`Average age is ${avgAge(people).round}.`);
 
 
 //-------------------------------------------------

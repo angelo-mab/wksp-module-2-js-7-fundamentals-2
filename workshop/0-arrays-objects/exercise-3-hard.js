@@ -10,3 +10,5 @@ const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "bl
 
 // You must console the colors array.
 // NO for loops!
+colors.splice(4,3);
+console.log(colors);

@@ -15,6 +15,17 @@
 //     petName: 'Mia',
 //     monthOfBirth: 'July'
 // }
+let person = {
+  name: { first: "Angelo", last: "Mab" },
+  age: "24",
+  city: "Montreal",
+  siblings: 1,
+  petName: "Nimbus",
+  monthOfBirth: "February",
+  birthday: "February 10",
+  numPet: 1,
+  favoriteActivity: "biking"
+};
 
 // A) console.log() your object.
 // B) console.log() a few of the values in the object.
@@ -48,9 +59,12 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
-
-}
-
+  title: "Singin' in the Rain",
+  directors: ["Stanley Donen", "Gene Kelly"],
+  releaseDate: 1952,
+  rating: 8.3,
+  actors: ["Gene Kelly", "Donald O'Connor", " Debbie Reynolds"]
+};
 
 //-------------------------------------------------
 
@@ -60,14 +74,13 @@ var favoriteMovie = {
 
 const key = "name";
 const person = {
-    name: "Alyssa P. Hacker",
-    age: 26,
-    hometown: "somewhere"
+  name: "Alyssa P. Hacker",
+  age: 26,
+  hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
-
+person.age; // => 26
+person.name; // => "Alyssa P. Hacker"
 
 //-------------------------------------------------
 
@@ -80,17 +93,17 @@ person.key;     // => "Alyssa P. Hacker"
 
 // Example
 const alyssa = {
-    name: {
-        first: "Alyssa",
-        middle: "P.",
-        last: "Hacker"
-    },
-    age: 26,
+  name: {
+    first: "Alyssa",
+    middle: "P.",
+    last: "Hacker"
+  },
+  age: 26
 };
 
 function fullName(person) {
-    // Your code here
-
+  // Your code here
+  return `${person.name.first} ${person.name.middle} ${person.name.last}`;
 }
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
@@ -106,16 +119,16 @@ console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
 // it does.
 
 const rick = {
-    name: {
-        first: "Rick",
-        last: "Sanchez"
-    },
-    age: 66,
+  name: {
+    first: "Rick",
+    last: "Sanchez"
+  },
+  age: 66
 };
 
 function betterFullName(person) {
-    // Your code here
-
+  // Your code here
+  return `${person.name.first} ${person.name.middle || ''} ${person.name.last}`
 }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"
