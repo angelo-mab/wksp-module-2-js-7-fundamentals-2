@@ -22,6 +22,9 @@ var favoriteDessert = {
 // Above is an object with the results of a poll.
 // Write a script that outputs the following:
 
+const dessertsArr = Object.values(favoriteDessert).sort();
+console.log(dessertsArr);
+
 // A)
 // the desserts ranked from most popular to least popular.
 // e.g. 1. <DESSERT_NAME>
